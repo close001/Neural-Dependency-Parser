@@ -4,7 +4,7 @@ This program implements a neural-network-based dependency parser. Dependency gra
 - A buffer of words yet to be processed.
 - A list of dependencies predicted by the parser.
 
-This is very much like a shift-reduce parser. Intially, the stack only contains ROOT, the dependencies lists is empty, and the buffer contains all words of the sentence in order. At each step, the parser advances by applying a "transition" to the partial parse untial its buffer is empty and the stack is of size 1. The following transitions can be applied:
+This is very much like a shift-reduce parser. Intially, the stack only contains ROOT, the dependencies lists is empty, and the buffer contains all words of the sentence in order. At each step, the parser advances by applying a "transition" to the partial parse until its buffer is empty and the stack is of size 1. The following transitions can be applied:
 - SHIFT: removes the first word from the buffer and pushes it onto the stack
 - LEFT-ARC: marks the second (second most recently added) item on the stack as a dependent of the first item and removes the second item from the stack.
 - RIGHT-ARC: marks the first (most recently added) item on the stack as a dependent of the second item and removes the first item from the stack.
