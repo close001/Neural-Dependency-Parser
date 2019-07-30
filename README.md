@@ -1,5 +1,5 @@
 # Neural-Dependency-Parser
-This program implements a neural-network-based dependency parser. Dependency grammars posit relationships between "head" words and their modifiers, much like the function argument relations that are required by lexical entries in categorial grammar. These relationships consitute trees, in which each word depends on exactly one parent: either another word or, for the head of the entire sentence, a dummy root symbol, ROOT. This program implements a transition-based parser that incrementally builds up a parse one step at a time. At every step, the state of the (partial) parse is represented by:
+Dependency grammars posit relationships between "head" words and their modifiers, much like the function argument relations that are required by lexical entries in categorial grammar. These relationships consitute trees, in which each word depends on exactly one parent: either another word or, for the head of the entire sentence, a dummy root symbol, ROOT. This program implements a transition-based parser that incrementally builds up a parse one step at a time. At every step, the state of the (partial) parse is represented by:
 - A stack of words that are currently being processed.
 - A buffer of words yet to be processed.
 - A list of dependencies predicted by the parser.
